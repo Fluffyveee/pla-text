@@ -1,43 +1,4 @@
---[[Updated Version by Silvamord]]--
---[[For questions and support go to https://discord.gg/thegrindspot]]--
---[[Copyright PrinceTommen - Script developed for Cyepicx (twitch.tv/cyepicx)]]--
---[[You are all allowed to use it as long as you don't pretend it's yours]]--
---[[Have fun !]]--
-version =" 3.6"
---[[
-Release Note:
-3.6:	Updated to work with tweaked.cc
-		os.pullEvent calls filtered to "keys" only
-		key compares from pullEvent now use the keys enum instead of magic numbers.
-3.5:	Added:	Multiple item slots system, including the items to throw (suggested by Portsanta and Cyepicx)
-		Major interface enhancements to make the configuration faster in spite of the new options
-		Enhanced item shortage security, supporting the multiple slots
-		New functions to manage I/O in a more compact way (suggested by Niseg)
-3.41:	Fixed:	Important glitch when the turtle returned to its starting position with a certain configuration
-		Displaying issues
-3.4:	Added:	Favorite configuration system
-		Ability to choose the direction of the series of parallel tunnels (right or left)
-		Support of execution without torches or chests (will not try to place them)
-		Security that stops the turtle when it runs out of chests or torches (suggested by Cyepicx)
-		Chests and torches status updated automatically
-		Security that requires the user to press enter before the turtle starts (suggested by Cyepicx)
-		The turtle now returns to its starting position after it finishes
-		New rotation function as well a a specific torch placing function
-	Fixed:	The turtle will now properly finish the hub after mining an odd number of tunnels	
-		The torch placement has been modified to avoid conflicts with chests
-3.3:	Added:	Enderchest Support (suggested by Niseg and Daniteh)
-		Release note
-3.2:	Fixed:	Very important chest placing issue (only appeared in 3.1)
-3.1:	Added:	New mining pattern for more efficiency (suggested by Niseg)
-		Smarter fuel management:	Will now consume the "stored" fuel before refueling
-						Can now consume any type of fuel supported by turtles (check the wiki)
-						Fuel type can be changed while the turtle is mining
-		Optimized the mining of 3 blocks high tunnels
-		Better interface, instructions remain visible and a line is dedicated to the fuel status (updated automatically)
-		Option to throw cobblestone automatically (suggested by Niseg)
-	Fixed:	Refueling issue in certain circumstances (reported by Cyepicx)			
-]]--
-function resetScreen()
+resetScreen()
 	term.clear()
 	term.setCursorPos(14,1)
 	write("Mining Turtle")
